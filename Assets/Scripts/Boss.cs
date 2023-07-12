@@ -6,6 +6,7 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
     private SpriteRenderer sr;
+    public GameObject Exp1;
 
     public Sprite DamagedSprite;
     // Start is called before the first frame update
@@ -21,5 +22,6 @@ public class Boss : MonoBehaviour
     public void Boss_Die()
     {
         sr.sprite = DamagedSprite;
+        Instantiate(Exp1, transform.position, transform.rotation);
     }
 }

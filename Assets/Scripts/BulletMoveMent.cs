@@ -39,8 +39,14 @@ public class BulletMoveMent : MonoBehaviour
                 break;
             case "Boss":
                 collision.SendMessage("Boss_Die");
+                Destroy(gameObject);
                 break;
             case "Enemy":
+                if (isPlayerbullet)
+                {
+                    collision.SendMessage("Die");                 
+                }
+                Destroy(gameObject);
                 break;
             case "Steal":
                 Destroy (gameObject);
