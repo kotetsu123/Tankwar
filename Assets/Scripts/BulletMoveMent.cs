@@ -31,6 +31,7 @@ public class BulletMoveMent : MonoBehaviour
                 if (!isPlayerbullet)
                 {
                     collision.SendMessage("Die");
+                    Destroy(gameObject);
                 }              
                 break;
             case "Wall":
@@ -44,9 +45,10 @@ public class BulletMoveMent : MonoBehaviour
             case "Enemy":
                 if (isPlayerbullet)
                 {
-                    collision.SendMessage("Die");                 
+                    collision.SendMessage("Die");
+                    Destroy(gameObject);
                 }
-                Destroy(gameObject);
+                
                 break;
             case "Steal":
                 Destroy (gameObject);

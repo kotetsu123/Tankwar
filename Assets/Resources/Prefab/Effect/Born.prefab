@@ -120,6 +120,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 4214031624486492664, guid: 7e80f39611a62c74ba9e98d4a795077c, type: 3}
   enmeyList:
-  - {fileID: 0}
-  - {fileID: 0}
-  createplayer: 1
+  - {fileID: 1384753037692801217, guid: 4dd9ffbfda3d8e644b4312485559080b, type: 3}
+  - {fileID: 2624127824611097619, guid: c1aa95800ea605248aa7d3bd87451fa5, type: 3}
+  createplayer: 0
