@@ -112,6 +112,8 @@ public class Movement : MonoBehaviour
         {
             return;
         }
+        //玩家生命值-1
+        Player_Manager.Instance.PlayerDeath = true;
         //产生爆炸特效
         Instantiate(ExplotionPrefab, transform.position,transform.rotation);
         //死亡

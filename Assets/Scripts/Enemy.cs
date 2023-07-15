@@ -150,6 +150,15 @@ public class Enemy : MonoBehaviour
         Instantiate(ExplotionPrefab, transform.position, transform.rotation);
         //À¿Õˆ
         Destroy(gameObject);
+        //player µ√∑÷ ++
+        Player_Manager.Instance.PlayerScore++;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            timeValChangeDirection = 4;
+        }
     }
 }
 
