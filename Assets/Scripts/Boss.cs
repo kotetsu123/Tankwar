@@ -21,6 +21,7 @@ public class Boss : MonoBehaviour
 
     public void Boss_Die()
     {
+        Player_Manager.Instance.isDefeat = true;
         sr.sprite = DamagedSprite;
         Instantiate(Exp1, transform.position, transform.rotation);
     }

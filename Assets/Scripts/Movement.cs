@@ -43,21 +43,26 @@ public class Movement : MonoBehaviour
                 ProtectPrefab.SetActive(false);
             }
         }
-        //¹¥»÷Cd
-        if (timeVal >=1.0f)
-        {
-            attack();
-        }
-        else
-        {
-            timeVal += Time.deltaTime;
-        }
+       
        
     }
 
     private void FixedUpdate()
     {
-        Player_Movement();     
+        if (Player_Manager.Instance.isDefeat)
+        {
+            return;
+        }
+        Player_Movement();
+        //¹¥»÷Cd
+        if (timeVal >= 1.0f)
+        {
+            attack();
+        }
+        else
+        {
+            timeVal += Time.fixedDeltaTime;
+        }
     }
     public void Player_Movement()
     {

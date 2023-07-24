@@ -8,6 +8,7 @@ public class Player_Manager : MonoBehaviour
     public int LifeValue = 3;
     public int PlayerScore = 0;
     public bool PlayerDeath = false;
+    public bool isDefeat=false;
 
     //ÒıÓÃ
     public GameObject Born;

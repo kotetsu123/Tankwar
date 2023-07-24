@@ -27,44 +27,44 @@ public class MapCrator : MonoBehaviour
             Assamble_MapResource(MapResource[1], new Vector3(i, -7, 0), Quaternion.identity);
         }
         //实例化空气墙
-        for(int i = -20; i < 21; i++)
+        for(int i = -16; i < 17; i++)
         {
             Assamble_MapResource(MapResource[6], new Vector3(i, 9, 0), Quaternion.identity);
         }
-        for (int i = -20; i < 21; i++)
+        for (int i = -16; i < 17; i++)
         {
             Assamble_MapResource(MapResource[6], new Vector3(i, -9, 0), Quaternion.identity);
         }
         for (int i = -8; i < 9; i++)
         {
-            Assamble_MapResource(MapResource[6], new Vector3(-20, i, 0), Quaternion.identity);
+            Assamble_MapResource(MapResource[6], new Vector3(-16, i, 0), Quaternion.identity);
         }
         for (int i = -8; i < 9; i++)
         {
-            Assamble_MapResource(MapResource[6], new Vector3(20, i, 0), Quaternion.identity);
+            Assamble_MapResource(MapResource[6], new Vector3(16, i, 0), Quaternion.identity);
         }
         //实例化地图
-        for(int i = 0; i < 60; i++)
+        for(int i = 0; i <80; i++)
         {
             Assamble_MapResource(MapResource[1], CreateRandomPosition(), Quaternion.identity);//墙的实例化
         }
-        for(int i=0;i<20;i++)
+        for(int i=0;i<40;i++)
         {
             Assamble_MapResource(MapResource[2], CreateRandomPosition(), Quaternion.identity);//障碍的实例化
         }
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < 40; i++)
         {
             Assamble_MapResource(MapResource[4], CreateRandomPosition(), Quaternion.identity);//水的实例化
         }
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < 40; i++)
         {
             Assamble_MapResource(MapResource[5], CreateRandomPosition(), Quaternion.identity);//草的实例化
         }
        
         //初始化敌人
         
-        Assamble_MapResource(MapResource[3], new Vector3(-16, 8, 0), Quaternion.identity);
-        Assamble_MapResource(MapResource[3], new Vector3(16, 8, 0), Quaternion.identity);
+        Assamble_MapResource(MapResource[3], new Vector3(-14, 8, 0), Quaternion.identity);
+        Assamble_MapResource(MapResource[3], new Vector3(14, 8, 0), Quaternion.identity);
         Assamble_MapResource(MapResource[3], new Vector3(0, 8, 0), Quaternion.identity);
 
         InvokeRepeating("CreateEnemy", 4, 6);
@@ -113,11 +113,11 @@ public class MapCrator : MonoBehaviour
         Vector3 EnemyPos = new Vector3();
         if (num == 0)
         {
-            EnemyPos = new Vector3(-16,8,0);
+            EnemyPos = new Vector3(-14,8,0);
         }
         else if(num==1)
         {
-            EnemyPos=new Vector3(16,8,0);
+            EnemyPos=new Vector3(14,8,0);
         }
         else
         {
