@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 9208033271715612561}
   - component: {fileID: 1979572199405857202}
   - component: {fileID: 1272207820108534269}
-  - component: {fileID: 5304103814767173221}
   - component: {fileID: 3989459020157758672}
   m_Layer: 0
   m_Name: 'QuicktypeEnemy '
@@ -157,26 +156,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.26, y: 0.26}
   m_EdgeRadius: 0
---- !u!114 &5304103814767173221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2624127824611097619}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b99db6054e19d741aaa026885f9e607, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveSpeed: 2
-  tankSprite:
-  - {fileID: 21300000, guid: c0ef003232494924789a8ce10566a01e, type: 3}
-  - {fileID: 21300000, guid: 610cdd41632ef2545b64568f5e459463, type: 3}
-  - {fileID: 21300000, guid: 391a3d5446f1a134b9fc7d75bb006cb0, type: 3}
-  - {fileID: 21300000, guid: f29f9b09701ed374dad8713ad64a83fe, type: 3}
-  bulletPrefab: {fileID: 5646452628460591538, guid: de47f5ce3c220e246b1fa62755286749, type: 3}
-  ExplotionPrefab: {fileID: 7248957774735974198, guid: 50a3c363f5eb57249a077f48db83943d, type: 3}
 --- !u!114 &3989459020157758672
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -55,7 +55,7 @@ public class Movement : MonoBehaviour
         }
         Player_Movement();
         //¹¥»÷Cd
-        if (timeVal >= 1.0f)
+        if (timeVal >= 0.6f)
         {
             attack();
         }
