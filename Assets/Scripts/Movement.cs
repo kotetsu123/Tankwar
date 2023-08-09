@@ -15,6 +15,8 @@ public class Movement : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject ExplotionPrefab;
     public GameObject ProtectPrefab;
+    public AudioSource moveAudio;
+    public AudioClip[] tankAudio;
 
 
     private SpriteRenderer sr;//声明图片精灵sr    
@@ -82,6 +84,19 @@ public class Movement : MonoBehaviour
         {
             return;//优先级 优先v的数值
         }
+       /* if (Mathf.Abs(v)>0.05f)
+        {
+            moveAudio.clip = tankAudio[1];
+            
+            if (!moveAudio.isPlaying)
+            {
+                moveAudio.Play();
+            }
+        }
+        else
+        {
+            moveAudio.clip=tankAudio[0];
+        }*///播放音效，超过绝对值的时候会播放该音效
 
 
         float h = Input.GetAxisRaw("Horizontal");
@@ -97,8 +112,20 @@ public class Movement : MonoBehaviour
             sr.sprite = tankSprite[1];
             bulletEulerAngles = new Vector3(0, 0, -90);
         }
+       /* if (Mathf.Abs(h) > 0.05f)
+        {
+            moveAudio.clip = tankAudio[1];
 
-        
+            if (!moveAudio.isPlaying)
+            {
+                moveAudio.Play();
+            }
+        }
+        else
+        {
+            moveAudio.clip = tankAudio[0];
+        }*///同上
+
     }
 
     

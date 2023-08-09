@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3479276787732594020}
   - component: {fileID: 1808282799778998161}
   - component: {fileID: -3096692158668747919}
+  - component: {fileID: -7977407207148385624}
   m_Layer: 0
   m_Name: steal
   m_TagString: Steal
@@ -111,3 +112,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &-7977407207148385624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6977136734773756821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca89364992186442a0f24f18035f543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitsteal: {fileID: 8300000, guid: 6556f171dc88f9a47938c6b3355b4407, type: 3}

@@ -7,6 +7,7 @@ public class Boss : MonoBehaviour
 {
     private SpriteRenderer sr;
     public GameObject Exp1;
+    public AudioClip dieaudio;
 
     public Sprite DamagedSprite;
     // Start is called before the first frame update
@@ -24,5 +25,6 @@ public class Boss : MonoBehaviour
         Player_Manager.Instance.isDefeat = true;
         sr.sprite = DamagedSprite;
         Instantiate(Exp1, transform.position, transform.rotation);
+        AudioSource.PlayClipAtPoint(dieaudio, transform.position);
     }
 }

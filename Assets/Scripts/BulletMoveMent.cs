@@ -51,6 +51,10 @@ public class BulletMoveMent : MonoBehaviour
                 
                 break;
             case "Steal":
+                if (isPlayerbullet)
+                {
+                    collision.SendMessage("playaudio");
+                } 
                 Destroy (gameObject);
                 break;
             default:

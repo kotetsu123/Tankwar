@@ -16,18 +16,23 @@ public class MapCrator : MonoBehaviour
 
     private void Awake()
     {
+        InitMap();
+
+    }
+    private void InitMap()
+    {
         //实例化老家
         //Instantiate(MapResource[0],new Vector3(0,-8,0),Quaternion.identity);//封装方法后用，封装好的方法，封装的方法用后clone就不会散落在面板当中相当整洁。为了例子，留了一处
         Assamble_MapResource(MapResource[0], new Vector3(0, -8, 0), Quaternion.identity);
         //墙围起来老家
         Assamble_MapResource(MapResource[1], new Vector3(-1, -8, 0), Quaternion.identity);
         Assamble_MapResource(MapResource[1], new Vector3(1, -8, 0), Quaternion.identity);
-        for(int i = -1; i < 2; i++)
+        for (int i = -1; i < 2; i++)
         {
             Assamble_MapResource(MapResource[1], new Vector3(i, -7, 0), Quaternion.identity);
         }
         //实例化空气墙
-        for(int i = -16; i < 17; i++)
+        for (int i = -16; i < 17; i++)
         {
             Assamble_MapResource(MapResource[6], new Vector3(i, 9, 0), Quaternion.identity);
         }
@@ -44,11 +49,11 @@ public class MapCrator : MonoBehaviour
             Assamble_MapResource(MapResource[6], new Vector3(16, i, 0), Quaternion.identity);
         }
         //实例化地图
-        for(int i = 0; i <80; i++)
+        for (int i = 0; i < 80; i++)
         {
             Assamble_MapResource(MapResource[1], CreateRandomPosition(), Quaternion.identity);//墙的实例化
         }
-        for(int i=0;i<40;i++)
+        for (int i = 0; i < 40; i++)
         {
             Assamble_MapResource(MapResource[2], CreateRandomPosition(), Quaternion.identity);//障碍的实例化
         }
@@ -60,9 +65,9 @@ public class MapCrator : MonoBehaviour
         {
             Assamble_MapResource(MapResource[5], CreateRandomPosition(), Quaternion.identity);//草的实例化
         }
-       
+
         //初始化敌人
-        
+
         Assamble_MapResource(MapResource[3], new Vector3(-14, 8, 0), Quaternion.identity);
         Assamble_MapResource(MapResource[3], new Vector3(14, 8, 0), Quaternion.identity);
         Assamble_MapResource(MapResource[3], new Vector3(0, 8, 0), Quaternion.identity);
@@ -72,7 +77,6 @@ public class MapCrator : MonoBehaviour
         //初始化玩家
         GameObject go = Instantiate(MapResource[3], new Vector3(-2, -8, 0), Quaternion.identity);
         go.GetComponent<Reboot>().createplayer = true;//调用Reboot的组件将createplayer的布尔值调整至true，这样生成的就是玩家了
-
     }
     private void Assamble_MapResource(GameObject createGameObject,Vector3 createPosiont,Quaternion rotation)
     {

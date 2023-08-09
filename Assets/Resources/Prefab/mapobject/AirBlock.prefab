@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5660578412249583695}
   - component: {fileID: 3152769593022244442}
+  - component: {fileID: 8600148144692169697}
   m_Layer: 0
   m_Name: AirBlock
   m_TagString: Steal
@@ -58,3 +59,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &8600148144692169697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2167763289788214974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca89364992186442a0f24f18035f543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitsteal: {fileID: 8300000, guid: 6556f171dc88f9a47938c6b3355b4407, type: 3}

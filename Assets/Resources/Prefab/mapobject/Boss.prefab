@@ -125,4 +125,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Exp1: {fileID: 7248957774735974198, guid: 50a3c363f5eb57249a077f48db83943d, type: 3}
+  dieaudio: {fileID: 8300000, guid: 084acb2afdf204e4b817291297ceb58b, type: 3}
   DamagedSprite: {fileID: 21300012, guid: 529e000d42d32de49bc475716ba7ae37, type: 3}

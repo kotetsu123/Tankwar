@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player_Manager : MonoBehaviour
 {
@@ -44,6 +45,7 @@ public class Player_Manager : MonoBehaviour
         if (isDefeat == true)
         {
             isDefeatUI.SetActive(true);
+            Invoke("ReturnStartScenes", 3);
             return;
         }
     }
@@ -53,6 +55,7 @@ public class Player_Manager : MonoBehaviour
         {
             isDefeat = true;
             //游戏失败，返回主界面
+            Invoke("ReturnStartScenes", 3);
         }
         else
         {
@@ -61,5 +64,9 @@ public class Player_Manager : MonoBehaviour
             go.GetComponent<Reboot>().createplayer = true;
             PlayerDeath = false;
         }
+    }
+    private void ReturnStartScenes()
+    {
+        SceneManager.LoadScene(0);
     }
 }
